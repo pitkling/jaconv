@@ -10,6 +10,9 @@ with open(os.path.join('jaconv', '__init__.py'), 'r', encoding='utf8') as f:
 
 setup(name='jaconv',
       packages=['jaconv'],
+      package_data={
+          "jaconv": ["README.rst", "CHANGES.rst"],
+      },
       version=version,
       license='MIT License',
       platforms=['POSIX', 'Windows', 'Unix', 'MacOS'],
@@ -39,7 +42,6 @@ setup(name='jaconv',
           'Programming Language :: Python :: 3.10',
           'Programming Language :: Python :: 3.11', 'Topic :: Text Processing'
       ],
-      data_files=[('', ['README.rst', 'CHANGES.rst'])],
       long_description='%s\n\n%s' %
       (open('README.rst', encoding='utf8').read(),
        open('CHANGES.rst', encoding='utf8').read()),
